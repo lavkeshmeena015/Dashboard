@@ -25,10 +25,10 @@ export default function Projects(props) {
         fontSize='2xl'
         mt='10px'
         mb='4px'>
-        All projects
+        Active projects
       </Text>
       <Text color={textColorSecondary} fontSize='md' me='26px' mb='40px'>
-        Here you can find more details about your projects. Keep you user
+        Here you can find more details about projects that are currently active in makerspace. Keep you yourself
         engaged by providing meaningful information.
       </Text>
       <Project
