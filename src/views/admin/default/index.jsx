@@ -57,7 +57,9 @@ import {
 } from "views/admin/default/variables/columnsData";
 import tableDataCheck from "views/admin/default/variables/tableDataCheck.json";
 import tableDataComplex from "views/admin/default/variables/tableDataComplex.json";
-
+import Projects from "views/admin/profile/components/Projects";
+import avatar from "assets/img/avatars/avatar4.png";
+import banner from "assets/img/auth/banner.png";
 export default function UserReports() {
   // Chakra Color Mode
   const brandColor = useColorModeValue("brand.500", "white");
@@ -79,8 +81,8 @@ export default function UserReports() {
               }
             />
           }
-          name='Earnings'
-          value='$350.4'
+          name='Active Projects'
+          value='34'
         />
         <MiniStatistics
           startContent={
@@ -89,14 +91,14 @@ export default function UserReports() {
               h='56px'
               bg={boxBg}
               icon={
-                <Icon w='32px' h='32px' as={MdAttachMoney} color={brandColor} />
+                <Icon w='32px' h='32px' as={MdFileCopy} color={brandColor} />
               }
             />
           }
-          name='Spend this month'
-          value='$642.39'
+          name='Completed Projects'
+          value='42'
         />
-        <MiniStatistics growth='+23%' name='Sales' value='$574.34' />
+        {/* <MiniStatistics growth='+23%' name='Sales' value='$574.34' />
         <MiniStatistics
           endContent={
             <Flex me='-16px' mt='10px'>
@@ -117,7 +119,7 @@ export default function UserReports() {
           }
           name='Your balance'
           value='$1,000'
-        />
+        /> */}
         <MiniStatistics
           startContent={
             <IconBox
@@ -127,7 +129,7 @@ export default function UserReports() {
               icon={<Icon w='28px' h='28px' as={MdAddTask} color='white' />}
             />
           }
-          name='New Tasks'
+          name='New Projects'
           value='154'
         />
         <MiniStatistics
@@ -142,16 +144,40 @@ export default function UserReports() {
             />
           }
           name='Total Projects'
-          value='2935'
+          value='264'
+        />
+         <MiniStatistics
+          startContent={
+            <IconBox
+              w='56px'
+              h='56px'
+              bg={boxBg}
+              icon={
+                <Icon w='32px' h='32px' as={MdFileCopy} color={brandColor} />
+              }
+            />
+          }
+          name='Total Members'
+          value='45'
         />
       </SimpleGrid>
 
       <SimpleGrid columns={{ base: 1, md: 2, xl: 2 }} gap='20px' mb='20px'>
-        <TotalSpent />
-        <WeeklyRevenue />
+        {/* <TotalSpent /> */}
+        {/* <WeeklyRevenue /> */}
       </SimpleGrid>
       <SimpleGrid columns={{ base: 1, md: 1, xl: 2 }} gap='20px' mb='20px'>
-        <CheckTable columnsData={columnsDataCheck} tableData={tableDataCheck} />
+        {/* <CheckTable columnsData={columnsDataCheck} tableData={tableDataCheck} /> */
+         <Projects
+         gridArea='1 / 2 / 2 / 2'
+         banner={banner}
+         avatar={avatar}
+         name='Makerspace NIT Raipur'
+         job='Projects'
+         posts='17'
+         followers='9.7k'
+         following='274'
+       />}
         <SimpleGrid columns={{ base: 1, md: 2, xl: 2 }} gap='20px'>
           <DailyTraffic />
           <PieCard />
@@ -162,10 +188,11 @@ export default function UserReports() {
           columnsData={columnsDataComplex}
           tableData={tableDataComplex}
         />
-        <SimpleGrid columns={{ base: 1, md: 2, xl: 2 }} gap='20px'>
+        {/* <SimpleGrid columns={{ base: 1, md: 2, xl: 2 }} gap='20px'>
           <Tasks />
           <MiniCalendar h='100%' minW='100%' selectRange={false} />
-        </SimpleGrid>
+        </SimpleGrid> */
+        }
       </SimpleGrid>
     </Box>
   );

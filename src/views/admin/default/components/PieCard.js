@@ -26,7 +26,7 @@ export default function Conversion(props) {
         w='100%'
         mb='8px'>
         <Text color={textColor} fontSize='md' fontWeight='600' mt='4px'>
-          Your Pie Chart
+          Project details
         </Text>
         <Select
           fontSize='sm'
@@ -63,14 +63,14 @@ export default function Conversion(props) {
               color='secondaryGray.600'
               fontWeight='700'
               mb='5px'>
-              Your files
+              Completed Projects
             </Text>
           </Flex>
           <Text fontSize='lg' color={textColor} fontWeight='700'>
-            63%
+            66%
           </Text>
         </Flex>
-        <VSeparator mx={{ base: "60px", xl: "60px", "2xl": "60px" }} />
+        <VSeparator mx={{ base: "60px", xl: "40px", "2xl": "60px" }} />
         <Flex direction='column' py='5px' me='10px'>
           <Flex align='center'>
             <Box h='8px' w='8px' bg='#6AD2FF' borderRadius='50%' me='4px' />
@@ -79,7 +79,7 @@ export default function Conversion(props) {
               color='secondaryGray.600'
               fontWeight='700'
               mb='5px'>
-              System
+              Active Projects
             </Text>
           </Flex>
           <Text fontSize='lg' color={textColor} fontWeight='700'>
