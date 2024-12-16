@@ -64,7 +64,7 @@ export default function TopCreatorTable(props) {
           fontSize={{ sm: '10px', lg: '12px' }}
           color="gray.400"
         >
-          ARTWORKS
+          RESPONSIBILITY
         </Text>
       ),
       cell: (info) => (
@@ -82,19 +82,13 @@ export default function TopCreatorTable(props) {
           fontSize={{ sm: '10px', lg: '12px' }}
           color="gray.400"
         >
-          RATING
+          SEMESTER
         </Text>
       ),
       cell: (info) => (
-        <Flex align="center">
-          <Progress
-            variant="table"
-            colorScheme="brandScheme"
-            h="8px"
-            w="108px"
-            value={info.getValue()}
-          />
-        </Flex>
+        <Text color={textColorSecondary} fontSize="sm" fontWeight="500">
+          {info.getValue()}
+        </Text>
       ),
     }),
   ];

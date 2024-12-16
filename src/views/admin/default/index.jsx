@@ -1,25 +1,4 @@
-/*!
-  _   _  ___  ____  ___ ________  _   _   _   _ ___   
- | | | |/ _ \|  _ \|_ _|__  / _ \| \ | | | | | |_ _| 
- | |_| | | | | |_) || |  / / | | |  \| | | | | || | 
- |  _  | |_| |  _ < | | / /| |_| | |\  | | |_| || |
- |_| |_|\___/|_| \_\___/____\___/|_| \_|  \___/|___|
-                                                                                                                                                                                                                                                                                                                                       
-=========================================================
-* Horizon UI - v1.1.0
-=========================================================
-
-* Product Page: https://www.horizon-ui.com/
-* Copyright 2023 Horizon UI (https://www.horizon-ui.com/)
-
-* Designed and Coded by Simmmple
-
-=========================================================
-
-* The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
-
-*/
-
+// HOME PAGE
 // Chakra imports
 import {
   Avatar,
@@ -60,10 +39,13 @@ import tableDataComplex from "views/admin/default/variables/tableDataComplex.jso
 import Projects from "views/admin/profile/components/Projects";
 import avatar from "assets/img/avatars/avatar4.png";
 import banner from "assets/img/auth/banner.png";
+import TopCreatorTable from "views/admin/marketplace/components/TableTopCreators";
+import tableData from "views/admin/default/variables/members.json";
 export default function UserReports() {
   // Chakra Color Mode
   const brandColor = useColorModeValue("brand.500", "white");
   const boxBg = useColorModeValue("secondaryGray.300", "whiteAlpha.100");
+
   return (
     <Box pt={{ base: "130px", md: "80px", xl: "80px" }}>
       <SimpleGrid
@@ -98,28 +80,6 @@ export default function UserReports() {
           name='Completed Projects'
           value='42'
         />
-        {/* <MiniStatistics growth='+23%' name='Sales' value='$574.34' />
-        <MiniStatistics
-          endContent={
-            <Flex me='-16px' mt='10px'>
-              <FormLabel htmlFor='balance'>
-                <Avatar src={Usa} />
-              </FormLabel>
-              <Select
-                id='balance'
-                variant='mini'
-                mt='5px'
-                me='0px'
-                defaultValue='usd'>
-                <option value='usd'>USD</option>
-                <option value='eur'>EUR</option>
-                <option value='gba'>GBA</option>
-              </Select>
-            </Flex>
-          }
-          name='Your balance'
-          value='$1,000'
-        /> */}
         <MiniStatistics
           startContent={
             <IconBox
@@ -162,12 +122,8 @@ export default function UserReports() {
         />
       </SimpleGrid>
 
-      <SimpleGrid columns={{ base: 1, md: 2, xl: 2 }} gap='20px' mb='20px'>
-        {/* <TotalSpent /> */}
-        {/* <WeeklyRevenue /> */}
-      </SimpleGrid>
       <SimpleGrid columns={{ base: 1, md: 1, xl: 2 }} gap='20px' mb='20px'>
-        {/* <CheckTable columnsData={columnsDataCheck} tableData={tableDataCheck} /> */
+        
          <Projects
          gridArea='1 / 2 / 2 / 2'
          banner={banner}
@@ -177,22 +133,10 @@ export default function UserReports() {
          posts='17'
          followers='9.7k'
          following='274'
-       />}
-        <SimpleGrid columns={{ base: 1, md: 2, xl: 2 }} gap='20px'>
-          <DailyTraffic />
-          <PieCard />
-        </SimpleGrid>
+       />
       </SimpleGrid>
-      <SimpleGrid columns={{ base: 1, md: 1, xl: 2 }} gap='20px' mb='20px'>
-        <ComplexTable
-          columnsData={columnsDataComplex}
-          tableData={tableDataComplex}
-        />
-        {/* <SimpleGrid columns={{ base: 1, md: 2, xl: 2 }} gap='20px'>
-          <Tasks />
-          <MiniCalendar h='100%' minW='100%' selectRange={false} />
-        </SimpleGrid> */
-        }
+      <SimpleGrid columns={{ base: 1 }} gap="20px" mb="20px">
+        <TopCreatorTable tableData={tableData} />
       </SimpleGrid>
     </Box>
   );
